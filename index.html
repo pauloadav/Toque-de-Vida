@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toque de Vida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              pink: {
+                500: '#E01E5A',
+                600: '#C71B50',
+                700: '#A31542',
+              },
+              gray: {
+                900: '#1A202C',
+                800: '#2D3748',
+                700: '#4A5568',
+                600: '#718096',
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .scroll-mt-24 {
+        scroll-margin-top: 6rem;
+      }
+      .form-input {
+        @apply w-full p-3 rounded-md border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-300 ease-in-out;
+      }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 leading-relaxed">
+    <header class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-pink-500 hover:text-pink-600 transition-colors duration-300">Toque de Vida</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Início</a>
+                <a href="#sobre" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Sobre</a>
+                <a href="#prevencao" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Prevenção</a>
+                <a href="#informativos" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Informativos</a>
+                <a href="#duvidas" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Dúvidas</a>
+                <a href="#recursos" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Links Úteis</a>
+                <a href="#contato" class="text-gray-700 hover:text-pink-500 transition-colors duration-300">Contato</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-pink-500 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <a href="#inicio" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Início</a>
+            <a href="#sobre" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Sobre</a>
+            <a href="#prevencao" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Prevenção</a>
+            <a href="#informativos" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Informativos</a>
+            <a href="#duvidas" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Dúvidas</a>
+            <a href="#recursos" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Links Úteis</a>
+            <a href="#contato" class="block py-2 px-6 text-gray-700 hover:bg-gray-200 transition-colors duration-300">Contato</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Home / Página Inicial -->
+        <section id="inicio" class="py-20 text-center bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-extrabold text-pink-500 mb-4">Toque de Vida</h1>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+                    Um projeto dedicado a compartilhar conhecimento, promover a conscientização e oferecer apoio na jornada de prevenção e tratamento do câncer de mama.
+                </p>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="#prevencao" class="bg-pink-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-pink-600 transition-colors duration-300">Guia de Prevenção</a>
+                    <a href="#contato" class="bg-white text-pink-500 border border-pink-500 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-pink-100 transition-colors duration-300">Entre em Contato</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre o Câncer de Mama e a Idealizadora -->
+        <section id="sobre" class="py-20 bg-gray-100 scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Sobre o Projeto</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-4">O que é o Câncer de Mama?</h3>
+                        <p class="text-gray-700 md:text-justify">O câncer de mama é uma doença causada pela multiplicação desordenada de células da mama, que formam um tumor. A detecção precoce é a chave para o sucesso do tratamento.</p>
+                        <p class="mt-4 text-gray-700 md:text-justify">Conhecer os fatores de risco é o primeiro passo para a prevenção consciente.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-4">Estatísticas e Prevenção</h3>
+                        <p class="text-gray-700 md:text-justify">É o tipo de câncer mais comum entre as mulheres no mundo e no Brasil. A boa notícia é que, com diagnóstico precoce, as chances de cura chegam a mais de 90%.</p>
+                        <p class="mt-4 text-gray-700 md:text-justify">Adotar um estilo de vida saudável e realizar exames de rotina são pilares fundamentais para a saúde da mulher.</p>
+                    </div>
+                </div>
+
+                <!-- Seção A Idealizadora -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-center">
+                        <h3 class="text-3xl font-bold text-pink-500 mb-4">A Idealizadora: LARA LUIZ DA SILVEIRA DUARTE</h3>
+                        <p class="text-gray-700 md:text-justify max-w-3xl mx-auto">
+                            A idealização do projeto 'Toque de Vida' nasceu da paixão e dedicação de Lara Luiz da Silveira Duarte. Como médica, Lara percebeu a necessidade de um espaço online que fosse ao mesmo tempo educativo e acolhedor, onde informações precisas sobre o câncer de mama pudessem ser compartilhadas de forma humanizada. O site é a materialização de seu desejo de empoderar mulheres através do conhecimento e de mostrar que, na jornada de prevenção e tratamento, ninguém está sozinha.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Prevenção e Sinais de Alerta -->
+        <section id="prevencao" class="py-20 bg-white scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Prevenção e Sinais de Alerta</h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-pink-50 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-3">Sinais de Alerta</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Nódulo fixo e indolor na mama, a maioria dos casos.</li>
+                            <li>Pele da mama avermelhada ou retraída, parecida com casca de laranja.</li>
+                            <li>Alterações no mamilo (retração).</li>
+                            <li>Saída espontânea de líquido de um dos mamilos.</li>
+                            <li>Pequenos nódulos no pescoço ou axilas.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-pink-50 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-3">Dicas de Hábitos Saudáveis</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Praticar atividades físicas regularmente.</li>
+                            <li>Manter o peso corporal adequado.</li>
+                            <li>Evitar o consumo de bebidas alcoólicas.</li>
+                            <li>Amamentar, sempre que possível.</li>
+                            <li>Realizar exames de rotina, como a mamografia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Informativos -->
+        <section id="informativos" class="py-20 bg-gray-100 scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Informativos da Dra. Lara</h2>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card Informativo 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                        <h3 class="text-xl font-bold text-pink-500 mb-3">Fatores de Risco: O que Aumenta a Chance?</h3>
+                        <p class="text-gray-700 flex-grow">Embora a causa exata seja desconhecida, fatores como idade, histórico familiar e estilo de vida (obesidade e sedentarismo) podem aumentar o risco. Conhecer esses fatores é o primeiro passo para a prevenção.</p>
+                        <p class="text-sm text-gray-500 mt-4">Publicado em: 13 de Setembro, 2025</p>
+                    </div>
+                    <!-- Card Informativo 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                        <h3 class="text-xl font-bold text-pink-500 mb-3">A Importância da Mamografia Anual</h3>
+                        <p class="text-gray-700 flex-grow">A mamografia é o principal exame para o rastreamento do câncer de mama. Ela pode detectar alterações milimétricas, antes mesmo de serem palpáveis, aumentando as chances de cura em mais de 90%.</p>
+                        <p class="text-sm text-gray-500 mt-4">Publicado em: 05 de Setembro, 2025</p>
+                    </div>
+                    <!-- Card Informativo 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                        <h3 class="text-xl font-bold text-pink-500 mb-3">Mito ou Verdade: Pancadas Causam Câncer?</h3>
+                        <p class="text-gray-700 flex-grow">É um mito. Não há evidências científicas de que traumas nos seios causem câncer. A dor pode levar a uma maior atenção à área, resultando na descoberta de um nódulo que já existia.</p>
+                        <p class="text-sm text-gray-500 mt-4">Publicado em: 28 de Agosto, 2025</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <p class="text-gray-600">Mais informativos serão adicionados em breve.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perguntas Frequentes / Dúvidas -->
+        <section id="duvidas" class="py-20 bg-white scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Perguntas Frequentes</h2>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">O câncer de mama é hereditário?</h3>
+                        <p class="text-gray-700 md:text-justify">Apenas cerca de 5% a 10% dos casos estão ligados a uma predisposição genética. O mais comum é que ele esteja relacionado a outros fatores de risco, como o estilo de vida.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Quem deve fazer a mamografia?</h3>
+                        <p class="text-gray-700 md:text-justify">O Ministério da Saúde recomenda que mulheres entre 50 e 69 anos realizem o exame a cada dois anos. Mulheres com histórico familiar devem começar o acompanhamento mais cedo, sob orientação médica.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Desodorantes antitranspirantes causam câncer de mama?</h3>
+                        <p class="text-gray-700 md:text-justify">Não há evidências científicas que comprovem essa relação. Agências de saúde consideram os desodorantes e antitranspirantes seguros para uso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links Úteis -->
+        <section id="recursos" class="py-20 bg-gray-100 scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Links Úteis</h2>
+                <div class="max-w-md mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><a href="https://www.inca.gov.br/" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:underline">Instituto Nacional de Câncer (INCA)</a></li>
+                            <li><a href="https://www.sbmastologia.com.br/" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:underline">Sociedade Brasileira de Mastologia</a></li>
+                            <li><a href="https://www.gov.br/saude/pt-br" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:underline">Ministério da Saúde</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-20 bg-white scroll-mt-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Entre em Contato</h2>
+                <div class="max-w-2xl mx-auto bg-gray-100 p-10 rounded-lg shadow-lg">
+                    <p class="text-gray-700 text-center mb-8">Envie sua dúvida ou sugestão. Sua mensagem é muito importante para nós!</p>
+                    <form id="contact-form" action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Nome Completo</label>
+                            <input type="text" id="name" name="name" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
+                            <input type="email" id="email" name="email" required class="form-input">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Sua Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+                        </div>
+                        <div class="flex justify-center">
+                            <button type="submit" class="bg-pink-500 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:bg-pink-600 transition-colors duration-300">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                    <p id="form-message" class="mt-4 text-center hidden"></p>
+                    <div class="mt-8 text-center border-t border-gray-300 pt-6">
+                        <p class="text-gray-700 font-semibold">Fale com a idealizadora do projeto diretamente:</p>
+                        <a href="https://wa.me/5561999196407" target="_blank" rel="noopener noreferrer" class="text-lg text-pink-500 hover:underline font-bold transition-colors duration-300">(61) 99919-6407</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Toque de Vida. Todos os direitos reservados.</p>
+            <p class="mt-2">"A informação é o melhor remédio."</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu on link click
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission simulation
+        const form = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formMessage.classList.remove('hidden', 'text-red-500');
+            formMessage.classList.add('text-green-600');
+            formMessage.textContent = 'Mensagem enviada com sucesso! Obrigado pelo seu contato.';
+            form.reset();
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
+
